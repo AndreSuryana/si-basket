@@ -8,7 +8,7 @@
             <div class="alert alert-warning" role="alert">
                 <h4 class="alert-heading">Pengumuman</h4>
                 <p>Mohon maaf, Anda belum terdaftar sebagai wasit pada sistem kami. Mohon untuk melakukan pendaftaran
-                    terlebih dahulu pada <a style="text-decoration: none" href="{{ route('profile') }}">Menu Wasit - Data
+                    terlebih dahulu pada <a style="text-decoration: none" href="{{ route('referee.data') }}">Menu Wasit - Data
                         Diri</a>.</p>
             </div>
         @endif
