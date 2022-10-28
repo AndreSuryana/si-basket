@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
+use App\Models\Game;
+use App\Models\Referee;
 use App\Models\RefereeEvent;
 use App\Models\RefereeLicense;
 use App\Models\User;
@@ -17,7 +19,11 @@ class MainController extends Controller
         return view('main.dashboard', [
             'title' => 'Dashboard',
             'recent_events' => RefereeEvent::orderByDesc('created_at')->limit(5)->get(),
-            'recent_licenses' => RefereeLicense::orderByDesc('created_at')->limit(5)->get()
+            'recent_licenses' => RefereeLicense::orderByDesc('created_at')->limit(5)->get(),
+            'event_count' => RefereeEvent::count(),
+            'license_count' => RefereeLicense::count(),
+            'game_count' => Game::count(),
+            'referee_count' => Referee::count(),
         ]);
     }
 

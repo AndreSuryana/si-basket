@@ -2,6 +2,72 @@
 
 @section('main')
     <div class="container mt-3">
+        <div class="row my-3">
+            <div class="col-sm">
+                <div class="card shadow-sm p-3 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm"><img src="{{ asset('assets/event.png') }}" alt="" width="50px"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm text-primary"><h1>{{ $event_count }}</h1></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm"><h6>Event</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card shadow-sm p-3 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm"><img src="{{ asset('assets/basketball-ball-variant.png') }}" alt="" width="50px"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm text-primary"><h1>{{ $game_count }}</h1></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm"><h6>Permainan</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card shadow-sm p-3 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm"><img src="{{ asset('assets/driver-license.png') }}" alt="" width="50px"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm text-primary"><h1>{{ $license_count }}</h1></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm"><h6>Lisensi</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card shadow-sm p-3 bg-body rounded">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm"><img src="{{ asset('assets/user.png') }}" alt="" width="50px"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm text-primary"><h1>{{ $referee_count }}</h1></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm"></div>
+                            <div class="col-sm"></div>
+                            <div class="col-sm"><h6>Wasit</h6></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="card shadow-sm p-3 bg-body rounded">
             <h2>Event Wasit</h2>
             <table class="table">
