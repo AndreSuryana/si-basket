@@ -33,7 +33,7 @@
                         <th scope="row">{{ $index + 1 }}</th>
                         <td>{{ $license->gameType->name }}</td>
                         <td>{{ $license->licenseLevel->name }}</td>
-                        <td>{{ $license->end_date }}</td>
+                        <td>{{ date_format(date_create($license->end_date), 'd F Y') }}</td>
                         <td class="d-flex justify-content-start">
                             <a href="{{ env('APP_URL') . $license->document_path }}" target="_blank"><i
                                     class="bi bi-filetype-pdf text-primary px-2"></i></a>

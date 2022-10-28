@@ -34,7 +34,7 @@
                         <th scope="row">{{ $index + 1 }}</th>
                         <td>{{ $event->name }}</td>
                         <td>{{ $event->level->name }}</td>
-                        <td>{{ $event->start_date }}</td>
+                        <td>{{ date_format(date_create($event->start_date), 'd F Y') }}</td>
                         <td>{{ ucfirst($event->verified_status) }}</td>
                         <td class="d-flex justify-content-evenly">
                             <a href="{{ env('APP_URL') . $event->document_path }}" target="_blank"><i

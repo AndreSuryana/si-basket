@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\City;
+use App\Models\RefereeEvent;
+use App\Models\RefereeLicense;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -13,7 +15,9 @@ class MainController extends Controller
     public function dashboard()
     {
         return view('main.dashboard', [
-            'title' => 'Dashboard'
+            'title' => 'Dashboard',
+            'recent_events' => RefereeEvent::orderByDesc('created_at')->limit(5)->get(),
+            'recent_licenses' => RefereeLicense::orderByDesc('created_at')->limit(5)->get()
         ]);
     }
 
